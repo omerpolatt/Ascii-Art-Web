@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+     <title>ASCII ART</title>
+    
+   
+</head>
+<body>
+    <div class="container">
+        <h1>ASCII Art Generator</h1>
+        <form action="/sayfa_cekme" method="post" target="resultFrame">
+            <label for="textInput">TEXT :</label>
+            <textarea id="textInput" name="metin" placeholder="-Input Text-" ></textarea>
+            <label for="typeSelect">TYPE SELECT :</label >
+            <select id="typeSelect" name="secim" required>
+                <option value="Seçim Yapınız" disabled selected hidden>-Make a Selection-</option >
+                <option value="thinkertoy">Thinkertoy</option>
+                <option value="standard">Standard</option>
+                <option value="shadow">Shadow</option>
+            </select>
+            <button type="submit">CONVERT</button>
+            <button type="reset">CLEAR</button>
+        </form>
+        
+    </div>
+
+    <div id="asciiResultContainer">
+        <div class="separator"></div>
+        <div id="asciiResult">
+            <h1>-OUTPUT-</h1>
+        </div>
+        <iframe id="resultFrame" name="resultFrame" frameborder="0" scrolling="yes" height="200"></iframe>
+    </div>
+</body>
+</html>
